@@ -4,6 +4,8 @@ from django.http import HttpResponse
 from django.shortcuts import render
 
 # Create your views here.
+from django.views.decorators.csrf import csrf_exempt
+
 
 def index(request):
     data = {
@@ -12,5 +14,8 @@ def index(request):
     }
     return HttpResponse(json.dumps(data), content_type='application/json')
 
-def student_register(request):
+@csrf_exempt
+def studentRegister(request):
+    id=request.POST['id']
+    print(id)
     return HttpResponse("yes")
