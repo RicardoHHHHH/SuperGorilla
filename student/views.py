@@ -8,6 +8,6 @@ from django.shortcuts import render
 def index(request):
     data = {
         'account': '12345',
-        'password': 'we',
+        'password': 'password',
     }
     return HttpResponse(json.dumps(data), content_type='application/json')
