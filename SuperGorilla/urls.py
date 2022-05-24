@@ -15,8 +15,8 @@ Including another URLconf
 """
 from django.contrib import admin
 from django.urls import path, include
-from student import urls as stu_urls
+from studentApp import urls as stu_urls
 urlpatterns = [
     #path('admin/', admin.site.urls),
-    path('student/',include(stu_urls)), # 将所有以app2开头的urls，都交给app2(app名)下的urls.py处理
+    path('studentApp/',include(stu_urls)), # 将所有以app2开头的urls，都交给app2(app名)下的urls.py处理
 ]

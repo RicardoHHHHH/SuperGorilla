@@ -11,3 +11,6 @@ def index(request):
         'password': 'password',
     }
     return HttpResponse(json.dumps(data), content_type='application/json')
+
+def student_register(request):
+    return HttpResponse("yes")

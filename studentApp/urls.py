@@ -1,5 +1,5 @@
 from django.urls import path, include
-from student import views
+from studentApp import views
 
 urlpatterns = [
     path('index/', views.index),
