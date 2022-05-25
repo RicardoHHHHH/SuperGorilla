@@ -8,6 +8,7 @@ from django.views.decorators.csrf import csrf_exempt
 
 from studentApp import models
 from studentApp.models import Student
+from teacherApp.models import Teacher
 
 
 def index(request):
