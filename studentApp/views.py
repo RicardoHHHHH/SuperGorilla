@@ -1,6 +1,6 @@
 import json
 
-from django.http import HttpResponse
+from django.http import HttpResponse, JsonResponse
 from django.shortcuts import render
 
 # Create your views here.
@@ -71,3 +71,12 @@ def studentLogin(request):
         'error':error
     }
     return HttpResponse(json.dumps(res), content_type='application/json')
+
+@csrf_exempt
+def courseInformation(request):
+    #students = models.Student.objects.all()
+    courses=models.course.objects.values().filter()
+    print(courses)
+    course_list = list(courses)
+    return JsonResponse(course_list, safe=False)
+    #return HttpResponse(json.dumps(courses), content_type='application/json')

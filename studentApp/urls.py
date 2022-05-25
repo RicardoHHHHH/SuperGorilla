@@ -4,5 +4,6 @@ from studentApp import views
 urlpatterns = [
     path('index/', views.index),
     path('studentRegister/', views.studentRegister),
-    path('studentLogin/', views.studentLogin)
+    path('studentLogin/', views.studentLogin),
+    path('courseInformation', views.courseInformation)
 ]
