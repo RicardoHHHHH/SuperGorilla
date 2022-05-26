@@ -80,3 +80,18 @@ def courseInformation(request):
     course_list = list(courses)
     return JsonResponse(course_list, safe=False)
     #return HttpResponse(json.dumps(courses), content_type='application/json')
+
+
+
+@csrf_exempt
+def courseSelect(request):
+    courseInfo=models.course_selection()
+    courseInfo.student_id=request.POST['student_id']
+    courseInfo.course_id = request.POST['course_id']
+    courseInfo.select_time=request.POST['select_time']
+    courseInfo.grade=0
+    courseInfo.save()
+    '''courses=models.course_selection.objects.all()
+    for course in courses:'''
+
+    return HttpResponse("yes")

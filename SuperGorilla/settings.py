@@ -78,6 +78,7 @@ WSGI_APPLICATION = 'SuperGorilla.wsgi.application'
 # https://docs.djangoproject.com/en/3.2/ref/settings/#databases
 
 DATABASES = {
+    #'init_command': 'SET foreign_key_checks = 0',
     'default': {
          'ENGINE': 'django.db.backends.mysql',
         'HOST': '127.0.0.1',		# 要连接的数据库ip
@@ -87,6 +88,7 @@ DATABASES = {
         'PASSWORD': 'root',				# 用户密码
         'OPTIONS': {
             'init_command': "SET sql_mode='STRICT_TRANS_TABLES'",
+            'init_command': "SET foreign_key_checks = 0;",
             }
     }
 }
