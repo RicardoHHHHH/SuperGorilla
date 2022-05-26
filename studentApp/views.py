@@ -93,5 +93,5 @@ def courseSelect(request):
     courseInfo.save()
     '''courses=models.course_selection.objects.all()
     for course in courses:'''
-    print()
+    print(1)
     return HttpResponse("yes")
